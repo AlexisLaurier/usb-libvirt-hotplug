@@ -62,9 +62,9 @@ if [ -z "${ACTION}" ]; then
   echo "Missing udev ACTION environment variable." >&2
   exit 1
 fi
-if [ "${ACTION}" == 'add' ]; then
+if [ "${ACTION}" == 'bind' ]; then
   COMMAND='attach-device'
-elif [ "${ACTION}" == 'remove' ]; then
+elif [ "${ACTION}" == 'unbind' ]; then
   COMMAND='detach-device'
 else
   echo "Ignored udev ACTION: ${ACTION}" >&2
