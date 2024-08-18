@@ -64,6 +64,7 @@ if [ -z "${ACTION}" ]; then
 fi
 if [ "${ACTION}" == 'bind' ]; then
   COMMAND='attach-device'
+  sleep $((RANDOM % 2))
 elif [ "${ACTION}" == 'unbind' ]; then
   COMMAND='detach-device'
 else
